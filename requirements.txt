@@ -7,3 +7,4 @@ openai==1.46.0
 tiktoken==0.7.0
 langdetect==1.0.9
 pydantic==2.9.2
+python-dotenv==1.0.1

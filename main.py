@@ -8,7 +8,9 @@ import tiktoken
 from langdetect import detect
 from typing import List
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI()
 
 # Supabase setup
