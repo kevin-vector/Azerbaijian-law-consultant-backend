@@ -78,13 +78,13 @@ async def rerank_results(request: RerankRequest):
             ranked_results,
             key=lambda x: x["relevanceScore"],
             reverse=True
-        )[:20]
+        )[:50]
 
         return RerankResponse(ranked_results=ranked_results)
 
     except Exception as e:
         logger.error(f"Re-ranking error: {str(e)}")
-        return RerankResponse(ranked_results=results[:20])
+        return RerankResponse(ranked_results=results[:50])
 
 @app.on_event("startup")
 async def startup_event():
